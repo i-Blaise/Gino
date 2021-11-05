@@ -1,0 +1,53 @@
+.bg-red
+{
+background-color: #E3202C !important;
+color: #E3202C !important;
+
+}
+
+.banner-one{
+  height: 400px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: -200px;
+}
+.banner-one img{
+    width: auto;
+    min-width: 100%;
+    max-height: 50%;}
+
+
+.video-one{
+    height: 400px;
+    overflow: hidden;
+    display: block;
+}
+.video-one video{
+    width: auto;
+    min-width: 100%;
+    max-height: 50%;
+}
+
+.btn {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+  /* Boostrap Buttons Styling */
+  
+  .btn-default {
+    font-family: Raleway-SemiBold;
+    font-size: 13px;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: 2px solid #37B538;
+    border-radius: 40px;
+    background: #37B538;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .btn-default:hover {
+    color: #FFF;
+    background: rgba(108, 88, 179, 0.75);
+    border: 2px solid rgba(108, 89, 179, 0.75);
+  }
