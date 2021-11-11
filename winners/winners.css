@@ -1,0 +1,110 @@
+body{
+    overflow-x: hidden;
+}
+
+.bg-red
+{
+background-color: #ED1C24 !important;
+
+}
+
+.title-form{
+    margin: 20px 20px;
+    /* font-size: 20px; */
+}
+
+.title-form .tnc{
+    color: #39b63a;
+}
+
+.title-form h3{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.filter{
+    margin: 13px 5px;
+}
+
+.winners img:only-child{
+    margin-top: 10px;
+}
+
+figcaption{
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+p{
+    color: grey;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: #4CAF50;
+    padding: 17px 106px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 4px 61px;
+    cursor: pointer;
+    border-radius: 30px;
+    white-space: nowrap;
+    border: 1px solid #4CAF50;
+  }
+
+  .view-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 118px;
+    margin-top: 5vh;
+    /* border-bottom: 2px solid gray; */
+  }
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 17px 106px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 4px 61px;
+    cursor: pointer;
+    border-radius: 30px;
+    white-space: nowrap;
+    border: 1px solid #4CAF50;
+  }
+
+
+  hr.line {
+    border-top: 1px solid grey;
+    margin: 0 18px;
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    /* border: 2px solid red; */
+    margin-top: 2vh;
+  }
+  
+  .footer-icons img {
+    margin-right: 25px;
+  }
+  
+  .footer-year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    /* border: 2px solid blue; */
+    margin-top: 6vh;
+  }
