@@ -3,6 +3,9 @@
 background-color: #ED1C24 !important;
 
 }
+a:visited {
+  color:white;
+}
 
 .title-form{
     margin: 20px 20px;

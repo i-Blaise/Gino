@@ -3,6 +3,9 @@
 background-color: #ED1C24 !important;
 
 }
+a:visited {
+  color:white;
+}
 
 .banner-one{
   height: 400px;

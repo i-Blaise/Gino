@@ -2,9 +2,6 @@ body{
     
   overflow-x: hidden;
 }
-a:visited {
-  color:white;
-}
 .bg-red
 {
 background-color: #ED1C24 !important;

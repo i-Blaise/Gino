@@ -7,6 +7,19 @@ body{
 background-color: #ED1C24 !important;
 
 }
+a:visited {
+  color:white;
+}
+
+
+.dropdown{
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.dropdown-item{
+  color: black;
+}
 
 .title-form{
     margin: 20px 20px;
