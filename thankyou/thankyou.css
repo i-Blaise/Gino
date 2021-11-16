@@ -1,3 +1,26 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* @media screen and (min-width: 450px) {
+  body {
+    margin: auto;
+    width: 375px;
+    border: 3px solid whitesmoke;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  html {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+} */
+
+
 .bg-red
 {
 background-color: #ED1C24 !important;
@@ -5,6 +28,11 @@ background-color: #ED1C24 !important;
 }
 a:visited {
   color:#ED1C24;
+}
+
+.brand-text{
+  color: #ffffff !important;
+  font-weight: 700;
 }
 
 .title-form{
@@ -47,7 +75,7 @@ p{
     justify-content: center;
     align-items: center;
     height: 118px;
-    margin-top: 5vh;
+    margin-top: -2vh;
     /* border-bottom: 2px solid gray; */
   }
   .button {
@@ -69,7 +97,7 @@ p{
 
 
   hr.line {
-    border-top: 1px solid grey;
+    border-top: 1px solid lightgrey;
     margin: 0 18px;
   }
 
@@ -92,5 +120,6 @@ p{
     align-items: center;
     height: 20px;
     /* border: 2px solid blue; */
-    margin-top: 6vh;
+    margin-top: 2vh;
+    color: #4CAF50; 
   }

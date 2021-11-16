@@ -1,5 +1,45 @@
-body{
-    overflow-x: hidden;
+html, body {
+  max-width: 100%;
+}
+
+/* @media screen and (min-width: 450px) {
+  body {
+    margin: auto;
+    width: 375px;
+    border: 3px solid whitesmoke;
+    border-radius: 30px;
+  }
+  .dropdown-menu{
+    left: -91px !important;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  html {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+} */
+.winners img:only-child {
+  margin-top: 36px !important;
+}
+
+@media screen and (min-width: 550px) {
+  .img-thumbnail{
+    height: 150px;
+    width: 150px; 
+    margin-top: 10px;
+  }
+  
+}
+
+@media screen and (min-width: 1140px) {
+  .img-thumbnail{
+    height: 200px;
+    width: 200px; 
+    margin-top: 10px;
+  }
+  
 }
 
 .bg-red
@@ -11,15 +51,36 @@ a:visited {
   color:#ED1C24;
 }
 
+.brand-text{
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
 
 .dropdown{
   margin-top: 10px;
   margin-left: 50px;
 }
 
+.dropdown-menu{
+  left: -25px !important;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .dropdown-item{
   color: black;
 }
+
+/* .img-thumbnail{
+  height: 70px;
+  width: 70px;
+} */
 
 .title-form{
     margin: 20px 20px;
@@ -33,15 +94,16 @@ a:visited {
 .title-form h3{
     font-weight: 600;
     font-size: 22px;
+    text-align: left;
 }
 
 .filter{
     margin: 13px 5px;
 }
 
-.winners img:only-child{
+/* .winners img:only-child{
     margin-top: 10px;
-}
+} */
 
 figcaption{
     font-weight: 700;
@@ -52,11 +114,11 @@ p{
     color: grey;
 }
 
-.button {
+/* .button {
     background-color: white;
     border: none;
     color: #4CAF50;
-    padding: 17px 106px;
+    padding: 17px 75px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -67,7 +129,7 @@ p{
     border-radius: 30px;
     white-space: nowrap;
     border: 1px solid #4CAF50;
-  }
+  } */
 
   .view-button-container {
     display: flex;
@@ -81,7 +143,7 @@ p{
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 17px 106px;
+    padding: 17px 75px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -96,7 +158,7 @@ p{
 
 
   hr.line {
-    border-top: 1px solid grey;
+    border-top: 1px solid lightgrey;
     margin: 0 18px;
   }
 
@@ -119,5 +181,6 @@ p{
     align-items: center;
     height: 20px;
     /* border: 2px solid blue; */
-    margin-top: 6vh;
+    margin-top: 2vh;
+    color: #4CAF50;
   }
