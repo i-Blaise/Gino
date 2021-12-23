@@ -10,11 +10,8 @@ $mainPlug = new mainClass();
 <head>
   <meta charset="UTF-8">
   <title>Gino Pomo Promotion</title>
-  
+  <link rel="icon" type="image/x-icon" href="../img/favicon_io/favicon.ico">
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">

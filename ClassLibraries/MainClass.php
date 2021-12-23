@@ -36,6 +36,18 @@ class mainClass extends DataBase{
         }
     }
 
+    function fetchWinners(){
+        $myQuery = "SELECT * FROM winners ORDER BY id DESC";
+        $result = mysqli_query($this->dbh, $myQuery);
+        return $result;
+    }
+
+    function countWinners(){
+        $myQuery = "SELECT * FROM winners";
+        $result = mysqli_query($this->dbh, $myQuery);
+        $row = mysqli_num_rows($result);
+        return $row;
+    }
 
 
 }

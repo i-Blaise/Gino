@@ -1,3 +1,9 @@
+<?php
+
+require_once('../ClassLibraries/MainClass.php');
+$mainPlug = new mainClass();
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -18,6 +24,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="winners.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -57,78 +64,112 @@
   <h3 class="tnc">Winners</h3>
   </div>
   <div class="col">
-    <!-- <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn"><img src="../img/filter.png" width="40px" height="40px"></button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div> -->
     <div class="dropdown">
       <button class="btn btn-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img src="../img/filter.png" width="40px" height="40px">
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">G. Accra</a>
-        <a class="dropdown-item" href="#">Eastern Region</a>
-        <a class="dropdown-item" href="#">Central Region</a>
+      <div class="dropdown-menu myBtnContainer" aria-labelledby="dropdownMenuButton">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('eastern.r')"> Ahafo Region</button>
+  <button class="btn" onclick="filterSelection('g.accra')"> Ashanti Region</button>
+  <button class="btn" onclick="filterSelection('central.r')"> Bono East Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
+  <button class="btn" onclick="filterSelection('colors')"> Bono Region</button>
       </div>
     </div>
   </div>
 
 
- 
+  <?php
+                        $recordNum = $mainPlug->countWinners();
+                        $winnersResult = $mainPlug->fetchWinners();
+  ?>
 
   <!-- <div class="col filter">
     <a href="#"><img src="img/filter.png" width="40px" height="40px"> </a>
   </div> -->
 </div>
-
+<?php
+if($recordNum >= 1)
+{
+?>
+<div class="container">
         <div class="row winners">
-          <div class="col">
+
+        <?php
+            while($winnersData = mysqli_fetch_assoc($winnersResult))
+            {
+              $id = $winnersData['id'];
+        ?>
+          <div class="col-lg-4 col-sm-4">
+            <a href="#"><img src="<?php echo $winnersData['imageLink']; ?>" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
+            <figcaption><?php echo $winnersData['fullName']; ?></figcaption>
+          </div>
+          <?php
+            }
+          ?>
+        </div>
+</div>
+
+<?php
+}else{
+?>
+
+<div class="container">
+        <div class="row winners">
+          <div class="col-lg-4 col-sm-4">
             <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
             <figcaption>Full Name</figcaption>
           </div>
-          <div class="col">
+          <div class="col-lg-4 col-sm-4">
             <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
             <figcaption>Full Name</figcaption>
           </div>
-          <div class="col">
+          <div class="col-lg-4 col-sm-4">
+            <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
+            <figcaption>Full Name</figcaption>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+            <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
+            <figcaption>Full Name</figcaption>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+            <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
+            <figcaption>Full Name</figcaption>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+            <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
+            <figcaption>Full Name</figcaption>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+            <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
+            <figcaption>Full Name</figcaption>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+            <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
+            <figcaption>Full Name</figcaption>
+          </div>
+          <div class="col-lg-4 col-sm-4">
             <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
             <figcaption>Full Name</figcaption>
           </div>
         </div>
+</div>
 
-        <div class="row winners">
-            <div class="col">
-              <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
-              <figcaption>Full Name</figcaption>
-            </div>
-            <div class="col">
-              <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
-              <figcaption>Full Name</figcaption>
-            </div>
-            <div class="col">
-              <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
-              <figcaption>Full Name</figcaption>
-            </div>
-          </div>
-
-          <div class="row winners">
-            <div class="col">
-              <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
-              <figcaption>Full Name</figcaption>
-            </div>
-            <div class="col">
-              <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
-              <figcaption>Full Name</figcaption>
-            </div>
-            <div class="col">
-              <a href="#"><img src="../img/profile-pic.png" alt="..." class="img-thumbnail" width="70px" height="70px"> </a>
-              <figcaption>Full Name</figcaption>
-            </div>
-          </div>
+<?php
+}
+?>
 
     <div class="row">
         <div class="view-button-container">
@@ -181,8 +222,56 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
+
+<script>
+  filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 <!-- partial -->
   
 </body>
