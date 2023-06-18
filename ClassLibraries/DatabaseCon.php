@@ -1,8 +1,8 @@
 <?php
 session_start();
 define('DB_SERVER','localhost');
-define('DB_USER','root');
-define('DB_PASS' ,'');
+define('DB_USER','root_ID_user');
+define('DB_PASS' ,'admin@2023');
 define('DB_NAME', 'ginopomopromotion');
 
 use PHPMailer\PHPMailer\PHPMailer;
